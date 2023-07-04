@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :system do
-    include Devise::Test::IntegrationHelpers
-    user = User.create!(name: 'john', email: "john#{Random.rand(1...1000)}@example.com", password: 'password',
-                      password_confirmation: 'password', confirmation_token: 'token', confirmed_at: Time.zone.now, confirmation_sent_at: DateTime.now)
+  include Devise::Test::IntegrationHelpers
+  user = User.create!(name: 'john', email: "john#{Random.rand(1...1000)}@example.com", password: 'password')
   group = Group.create!(user_id: user.id, name: 'test', icon: 'burger.png')
   subject do
     Category.new(user_id: user.id, name: 'test', amount: 20)
