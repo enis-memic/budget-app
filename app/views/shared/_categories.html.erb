@@ -56,8 +56,10 @@
     <% end %>
   <% end %>
 </div>
-<%= link_to new_category_path,class:"nav-link" do %>
-  <section class="bg-success shadow text-center text-white p-2 mt-5">
-    <p class="border border-white my-3 p-1">Add New Category</p>
-  </section>
-<% end %>
+<div class="fixed-bottom" style="margin-bottom: 80px;">
+  <%= link_to new_category_path, class:"nav-link", style:'background-color: #5fb523' do %>
+    <section class="shadow text-center text-white p-2 mt-5">
+      <p class="border border-white my-3 p-1">Add New Category</p>
+    </section>
+  <% end %>
+</div>
